@@ -1,0 +1,90 @@
+body{
+    margin:0;
+    padding:0;
+    background:#f8f5ef;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:'Poppins', sans-serif;
+}
+
+h1{
+    font-family:'Bodoni Moda', serif;
+    font-size:78px;
+    font-weight:600;
+    line-height:1.05;
+    letter-spacing:0.5px;
+    color:#8b6d4a;
+    text-align:center;
+    margin: 0;
+}
+
+h2{
+    font-size:48px;
+    margin:10px 0;
+}
+
+p{
+    margin:0;
+}
+
+button{
+
+    margin-top:40px;
+
+    padding:16px 45px;
+
+    background:#1F6B52;
+
+    color:white;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+.title{
+    font-family:'Poppins',sans-serif;
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    color:#8b6d4a;
+    text-align:center;
+    margin-bottom:20px;
+}
+.date{
+    font-family:'Poppins',sans-serif;
+    font-size:18px;
+    letter-spacing:3px;
+    color:#8b6d4a;
+    text-align:center;
+     margin-top:25px;
+}
+.overlay{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+button:hover{
+
+    background:#8b6d4a;
+
+    transform:translateY(-2px);
+
+}
