@@ -1,0 +1,358 @@
+/* ================================================================
+   OFFICIAL ILLUSTRATED PORTRAITS — PUTERI & ILHAM
+   Source artwork remains intact. Responsive masks and positioning
+   merge its ivory paper into The Emerald Story Garden.
+   ================================================================ */
+
+.storybook picture {
+    display: block;
+}
+
+.storybook .world-couple-portrait picture,
+.storybook .world-object--puteri picture,
+.storybook .world-object--ilham picture,
+.storybook .world-closing-couple picture,
+.storybook .story-person__portrait picture {
+    width: 100%;
+    height: 100%;
+}
+
+.storybook.world-camera-ready .world-couple-portrait,
+.storybook.world-camera-ready .world-object--puteri figure,
+.storybook.world-camera-ready .world-object--ilham figure,
+.storybook.world-camera-ready .world-closing-couple picture {
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.storybook.world-camera-ready .world-couple-portrait img,
+.storybook.world-camera-ready .world-object--puteri img,
+.storybook.world-camera-ready .world-object--ilham img,
+.storybook.world-camera-ready .world-closing-couple img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    mix-blend-mode: normal;
+    filter: none;
+}
+
+/* The establishing pair overlaps as one clearing rather than two cards. */
+.storybook.world-camera-ready .world-object--couple {
+    width: 660px;
+    height: 510px;
+}
+
+.storybook.world-camera-ready .world-object--couple .world-object__halo {
+    top: 49%;
+    width: 470px;
+    opacity: .5;
+}
+
+.storybook.world-camera-ready .world-couple-portrait {
+    bottom: -40px;
+    width: 335px;
+    aspect-ratio: 2 / 3;
+    -webkit-mask-image: radial-gradient(ellipse 58% 72% at 50% 47%, #000 0 64%, rgba(0, 0, 0, .9) 79%, transparent 100%);
+    mask-image: radial-gradient(ellipse 58% 72% at 50% 47%, #000 0 64%, rgba(0, 0, 0, .9) 79%, transparent 100%);
+}
+
+.storybook.world-camera-ready .world-couple-portrait--puteri {
+    z-index: 1;
+    left: 28px;
+    transform: rotate(-1.2deg);
+}
+
+.storybook.world-camera-ready .world-couple-portrait--ilham {
+    z-index: 2;
+    right: 28px;
+    transform: rotate(1.2deg);
+}
+
+.storybook.world-camera-ready .world-couple-portrait--puteri img,
+.storybook.world-camera-ready .world-object--puteri img,
+.storybook.world-camera-ready .world-closing-couple picture:first-child img {
+    object-position: 43% 50%;
+}
+
+.storybook.world-camera-ready .world-couple-portrait--ilham img,
+.storybook.world-camera-ready .world-object--ilham img,
+.storybook.world-camera-ready .world-closing-couple picture:last-child img {
+    object-position: 57% 50%;
+}
+
+.storybook.world-camera-ready .world-monogram {
+    z-index: 4;
+    top: 9px;
+}
+
+/* A dedicated readable pair anchors the establishing shot. */
+.storybook .establishing-portraits {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 1%;
+    width: min(96vw, 390px);
+    height: 300px;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+.storybook .establishing-portraits picture {
+    position: absolute;
+    bottom: 0;
+    width: 54%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    -webkit-mask-image: radial-gradient(ellipse 58% 58% at 50% 48%, #000 0 62%, rgba(0, 0, 0, .88) 77%, transparent 100%);
+    mask-image: radial-gradient(ellipse 58% 58% at 50% 48%, #000 0 62%, rgba(0, 0, 0, .88) 77%, transparent 100%);
+}
+
+.storybook .establishing-portraits picture:first-child {
+    left: 0;
+}
+
+.storybook .establishing-portraits picture:last-child {
+    right: 0;
+}
+
+.storybook .establishing-portraits img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.storybook .establishing-portraits picture:first-child img {
+    object-position: 43% 50%;
+}
+
+.storybook .establishing-portraits picture:last-child img {
+    object-position: 57% 50%;
+}
+
+@media (max-width: 599px) {
+    .storybook .establishing-portraits picture:last-child {
+        right: 3%;
+        width: 49%;
+    }
+}
+
+/* Full 2:3 artwork is retained at both individual camera stops. */
+.storybook.world-camera-ready .world-object--puteri,
+.storybook.world-camera-ready .world-object--ilham {
+    width: clamp(350px, 100vw, 420px);
+    height: auto;
+    aspect-ratio: 2 / 3;
+    --object-rotate: 0deg;
+}
+
+.storybook.world-camera-ready .world-object--puteri figure,
+.storybook.world-camera-ready .world-object--ilham figure {
+    inset: 0;
+    -webkit-mask-image: radial-gradient(ellipse 58% 72% at 50% 47%, #000 0 66%, rgba(0, 0, 0, .92) 80%, transparent 100%);
+    mask-image: radial-gradient(ellipse 58% 72% at 50% 47%, #000 0 66%, rgba(0, 0, 0, .92) 80%, transparent 100%);
+}
+
+.storybook.world-camera-ready .world-object--puteri .world-botanical-arch,
+.storybook.world-camera-ready .world-object--ilham .world-botanical-arch {
+    display: none;
+}
+
+.storybook.world-camera-ready .world-object--puteri .world-object__seal,
+.storybook.world-camera-ready .world-object--ilham .world-object__seal {
+    z-index: 3;
+    right: 5%;
+    bottom: 8%;
+}
+
+/* Adjacent versions are quiet so the same person never double-exposes. */
+.storybook.world-camera-ready .world-stage[data-active-shot="couple"] .world-object--puteri,
+.storybook.world-camera-ready .world-stage[data-active-shot="couple"] .world-object--ilham,
+.storybook.world-camera-ready .world-stage[data-active-shot="puteri"] .world-object--couple,
+.storybook.world-camera-ready .world-stage[data-active-shot="puteri"] .world-object--ilham,
+.storybook.world-camera-ready .world-stage[data-active-shot="ilham"] .world-object--couple,
+.storybook.world-camera-ready .world-stage[data-active-shot="ilham"] .world-object--puteri,
+.storybook.world-camera-ready .world-stage[data-active-shot="closing"] .world-object--puteri,
+.storybook.world-camera-ready .world-stage[data-active-shot="closing"] .world-object--ilham {
+    opacity: .025;
+    filter: saturate(.3);
+}
+
+.storybook.world-camera-ready .world-stage[data-active-shot="closing"] .world-object--couple {
+    opacity: .025;
+    filter: saturate(.3);
+}
+
+/* Closing uses the official pair instead of the former silhouette. */
+.storybook.world-camera-ready .world-closing-couple {
+    left: 50%;
+    bottom: 56px;
+    width: 286px;
+    height: 224px;
+    display: none;
+    border-radius: 0;
+    background: transparent;
+    transform: translateX(-50%);
+}
+
+.storybook .closing-portraits {
+    position: absolute;
+    z-index: 1;
+    top: 160px;
+    left: 50%;
+    width: min(82vw, 370px);
+    height: min(34svh, 286px);
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+.storybook .closing-portraits picture {
+    position: absolute;
+    bottom: 0;
+    width: 54%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    -webkit-mask-image: radial-gradient(ellipse 58% 58% at 50% 48%, #000 0 62%, rgba(0, 0, 0, .88) 77%, transparent 100%);
+    mask-image: radial-gradient(ellipse 58% 58% at 50% 48%, #000 0 62%, rgba(0, 0, 0, .88) 77%, transparent 100%);
+}
+
+.storybook .closing-portraits picture:first-child {
+    z-index: 1;
+    left: 0;
+}
+
+.storybook .closing-portraits picture:last-child {
+    z-index: 2;
+    right: 0;
+}
+
+.storybook .closing-portraits img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.storybook .closing-portraits picture:first-child img {
+    object-position: 43% 50%;
+}
+
+.storybook .closing-portraits picture:last-child img {
+    object-position: 57% 50%;
+}
+
+.storybook .closing > .response-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.storybook.world-camera-ready .world-closing-couple picture {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 225px;
+    -webkit-mask-image: radial-gradient(ellipse 58% 72% at 50% 48%, #000 0 64%, rgba(0, 0, 0, .9) 79%, transparent 100%);
+    mask-image: radial-gradient(ellipse 58% 72% at 50% 48%, #000 0 64%, rgba(0, 0, 0, .9) 79%, transparent 100%);
+}
+
+.storybook.world-camera-ready .world-closing-couple picture:first-child {
+    left: 0;
+    z-index: 1;
+}
+
+.storybook.world-camera-ready .world-closing-couple picture:last-child {
+    right: 0;
+    z-index: 2;
+}
+
+/* Static/no-JS portrait frames keep the same official artwork. */
+.storybook .story-couple .person-photo picture {
+    width: 100%;
+    height: 100%;
+}
+
+.storybook .story-couple .story-person--puteri .person-photo img {
+    object-position: 43% 50%;
+}
+
+.storybook .story-couple .story-person--ilham .person-photo img {
+    object-position: 57% 50%;
+}
+
+@media (max-width: 899px) {
+    .storybook.world-camera-ready .world-object--puteri {
+        top: 18%;
+    }
+
+    .storybook.world-camera-ready .world-object--ilham {
+        top: 22.5%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .storybook.world-camera-ready .world-object--couple {
+        width: 760px;
+        height: 590px;
+    }
+
+    .storybook.world-camera-ready .world-couple-portrait {
+        width: 385px;
+    }
+
+    .storybook.world-camera-ready .world-object--puteri,
+    .storybook.world-camera-ready .world-object--ilham {
+        width: 500px;
+    }
+}
+
+@media (min-width: 900px) {
+    .storybook .establishing-portraits {
+        bottom: -92px;
+        width: min(78vw, 1120px);
+        height: 650px;
+    }
+
+    .storybook .establishing-portraits picture {
+        width: 430px;
+    }
+
+    .storybook .closing-portraits {
+        top: 80px;
+        width: 430px;
+        height: 300px;
+    }
+
+    .storybook.world-camera-ready .world-object--couple {
+        width: 820px;
+        height: 650px;
+    }
+
+    .storybook.world-camera-ready .world-couple-portrait {
+        bottom: -66px;
+        width: 425px;
+    }
+
+    .storybook.world-camera-ready .world-couple-portrait--puteri {
+        left: 130px;
+    }
+
+    .storybook.world-camera-ready .world-couple-portrait--ilham {
+        right: 24px;
+    }
+
+    .storybook.world-camera-ready .world-object--puteri,
+    .storybook.world-camera-ready .world-object--ilham {
+        width: 460px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .storybook.world-camera-ready .world-object--puteri,
+    .storybook.world-camera-ready .world-object--ilham {
+        width: 520px;
+    }
+}

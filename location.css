@@ -1,0 +1,393 @@
+/* Venue scene: editorial information spread with a decorative paper map. */
+.storybook.world-camera-ready .world-location {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 108svh;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(0,.82fr) minmax(390px,1.18fr);
+    align-items: center;
+    gap: clamp(48px,7vw,112px);
+    margin: 0;
+    padding: clamp(90px,11svh,128px) max(6vw,var(--story-safe-right)) clamp(92px,12svh,136px) max(6vw,var(--story-safe-left));
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 83% 24%,rgba(181,154,98,.12),transparent 23%),
+        linear-gradient(105deg,rgba(247,245,239,.995) 0 43%,rgba(247,245,239,.9) 62%,rgba(238,236,229,.72) 100%);
+}
+
+.storybook.world-camera-ready .world-location::before,
+.storybook.world-camera-ready .world-location::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.storybook.world-camera-ready .world-location::before {
+    width: clamp(170px,20vw,310px);
+    aspect-ratio: 1;
+    right: -6%;
+    top: -6%;
+    opacity: .18;
+    background:
+        radial-gradient(ellipse at 67% 17%,transparent 0 21%,var(--muted-emerald) 22% 25%,transparent 26%),
+        radial-gradient(ellipse at 42% 42%,transparent 0 23%,var(--muted-emerald) 24% 27%,transparent 28%),
+        radial-gradient(ellipse at 70% 69%,transparent 0 20%,var(--muted-emerald) 21% 24%,transparent 25%),
+        linear-gradient(70deg,transparent 48.7%,var(--muted-gold) 49% 50%,transparent 50.3%);
+    rotate: 23deg;
+}
+
+.storybook.world-camera-ready .world-location::after {
+    left: clamp(24px,4vw,64px);
+    bottom: 7%;
+    width: clamp(76px,8vw,118px);
+    height: 1px;
+    background: linear-gradient(90deg,var(--muted-gold),transparent);
+}
+
+.storybook.world-camera-ready .world-location > * {
+    width: auto;
+    margin: 0;
+}
+
+.storybook.world-camera-ready .venue-copy {
+    position: relative;
+    z-index: 5;
+    width: min(100%,510px);
+    margin: 0;
+}
+
+.storybook.world-camera-ready .venue-kicker {
+    margin: 0;
+    color: var(--gold-ink,#80683f);
+    font-family: var(--font-body,"Poppins",sans-serif);
+    font-size: clamp(.68rem,.8vw,.76rem);
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+}
+
+.storybook.world-camera-ready .venue-rule {
+    display: block;
+    width: clamp(52px,6vw,82px);
+    height: 1px;
+    margin: 18px 0 25px;
+    background: linear-gradient(90deg,var(--muted-gold),rgba(181,154,98,.08));
+}
+
+.storybook.world-camera-ready .world-location .venue-copy h3 {
+    margin: 0;
+    color: var(--deep-emerald);
+    font-family: var(--font-display,"Cormorant Garamond",serif);
+    font-size: clamp(2.75rem,4.1vw,4.4rem);
+    font-weight: 500;
+    line-height: .9;
+    letter-spacing: -.035em;
+}
+
+.storybook.world-camera-ready .world-location .venue-copy h3 span,
+.storybook.world-camera-ready .world-location .venue-copy h3 em {
+    display: block;
+    white-space: nowrap;
+}
+
+.storybook.world-camera-ready .world-location .venue-copy h3 em {
+    margin: .12em 0 0 .24em;
+    color: var(--muted-emerald);
+    font-weight: 400;
+}
+
+.storybook.world-camera-ready .world-location .venue-address {
+    max-width: 52ch;
+    margin: clamp(25px,2.6vw,36px) 0 0;
+    color: var(--primary-ink);
+    font-family: var(--font-body,"Poppins",sans-serif);
+    font-size: clamp(.92rem,1.1vw,1.03rem);
+    font-weight: 400;
+    line-height: 1.72;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+}
+
+.storybook.world-camera-ready .world-location .venue-region {
+    margin: 17px 0 0;
+    color: var(--gold-ink,#80683f);
+    font-family: var(--font-body,"Poppins",sans-serif);
+    font-size: clamp(.64rem,.75vw,.73rem);
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.storybook.world-camera-ready .world-location .venue-cta {
+    width: fit-content;
+    min-width: 246px;
+    min-height: 52px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: clamp(30px,4vw,44px) 0 0;
+    padding: 14px 18px 14px 20px;
+    border: 1px solid var(--deep-emerald);
+    border-radius: 999px;
+    color: var(--paper-ivory);
+    background: var(--deep-emerald);
+    box-shadow: 0 15px 32px rgba(18,53,47,.16);
+    font-family: var(--font-body,"Poppins",sans-serif);
+    font-size: .72rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: .12em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .28s ease, background .28s ease, box-shadow .28s ease, transform .28s ease;
+}
+
+.storybook.world-camera-ready .world-location .venue-cta svg { flex: 0 0 auto; }
+.storybook.world-camera-ready .world-location .venue-cta__pin { width: 19px; height: 19px; }
+.storybook.world-camera-ready .world-location .venue-cta__arrow { width: 18px; height: 18px; margin-left: auto; }
+.storybook.world-camera-ready .world-location .venue-cta:hover,
+.storybook.world-camera-ready .world-location .venue-cta:focus-visible {
+    color: var(--deep-emerald);
+    background: var(--paper-ivory);
+    box-shadow: 0 18px 38px rgba(18,53,47,.2);
+    transform: translateY(-2px);
+}
+.storybook.world-camera-ready .world-location .venue-cta:focus-visible { outline: 2px solid var(--muted-gold); outline-offset: 4px; }
+
+.storybook.world-camera-ready .venue-visual {
+    position: relative;
+    z-index: 3;
+    width: min(100%,700px);
+    min-width: 0;
+    margin: 0;
+    justify-self: end;
+}
+
+.storybook.world-camera-ready .venue-visual__index {
+    margin: 0 0 14px;
+    color: var(--gold-ink,#80683f);
+    font-family: var(--font-body,"Poppins",sans-serif);
+    font-size: .64rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .22em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.storybook.world-camera-ready .venue-map-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.28;
+    overflow: hidden;
+    border: 1px solid rgba(181,154,98,.28);
+    border-radius: 2px;
+    background:
+        radial-gradient(circle at 69% 39%,rgba(181,154,98,.12),transparent 24%),
+        linear-gradient(135deg,rgba(255,255,255,.9),rgba(241,238,228,.96));
+    box-shadow: 0 30px 70px rgba(36,51,45,.15),0 2px 0 rgba(255,255,255,.75) inset;
+    rotate: .45deg;
+}
+
+.storybook.world-camera-ready .venue-map-card::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(181,154,98,.18);
+    pointer-events: none;
+}
+
+.storybook.world-camera-ready .venue-map-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .24;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(18,53,47,.18) .55px,transparent .7px);
+    background-size: 7px 7px;
+    mix-blend-mode: multiply;
+}
+
+.storybook.world-camera-ready .venue-map-card__fold {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg,transparent,rgba(18,53,47,.11) 12% 88%,transparent);
+    box-shadow: 11px 0 18px rgba(36,51,45,.025),-11px 0 18px rgba(255,255,255,.34);
+}
+.storybook.world-camera-ready .venue-map-card__fold--one { left: 34%; }
+.storybook.world-camera-ready .venue-map-card__fold--two { left: 67%; }
+
+.storybook.world-camera-ready .venue-map-card__routes {
+    position: absolute;
+    z-index: 3;
+    inset: 3%;
+    width: 94%;
+    height: 94%;
+    overflow: visible;
+}
+.storybook.world-camera-ready .venue-route { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.storybook.world-camera-ready .venue-route--primary { stroke: var(--muted-emerald); stroke-width: 3; opacity: .55; }
+.storybook.world-camera-ready .venue-route--secondary { stroke: var(--muted-gold); stroke-width: 1.35; opacity: .48; stroke-dasharray: 8 9; }
+.storybook.world-camera-ready .venue-route--water { stroke: #91a9a2; stroke-width: 5; opacity: .25; }
+.storybook.world-camera-ready .venue-map-card__routes circle { fill: var(--muted-gold); opacity: .62; }
+
+.storybook.world-camera-ready .venue-map-card__pin {
+    position: absolute;
+    z-index: 6;
+    left: 66%;
+    top: 31%;
+    width: clamp(42px,5vw,62px);
+    filter: drop-shadow(0 10px 13px rgba(18,53,47,.18));
+}
+.storybook.world-camera-ready .venue-map-card__pin svg { display: block; width: 100%; height: auto; }
+.storybook.world-camera-ready .venue-map-card__pin path { fill: var(--deep-emerald); stroke: var(--muted-gold); stroke-width: 1.1; }
+.storybook.world-camera-ready .venue-map-card__pin circle { fill: var(--paper-ivory); }
+
+.storybook.world-camera-ready .venue-map-card__label {
+    position: absolute;
+    z-index: 6;
+    left: 72%;
+    top: 42%;
+    display: flex;
+    flex-direction: column;
+    color: var(--deep-emerald);
+    white-space: nowrap;
+}
+.storybook.world-camera-ready .venue-map-card__label strong {
+    font-family: var(--font-display,"Cormorant Garamond",serif);
+    font-size: clamp(1.45rem,2.2vw,2rem);
+    font-weight: 600;
+    line-height: 1;
+}
+.storybook.world-camera-ready .venue-map-card__label small {
+    margin-top: 5px;
+    color: var(--gold-ink,#80683f);
+    font-family: var(--font-body,"Poppins",sans-serif);
+    font-size: clamp(.48rem,.6vw,.6rem);
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.storybook.world-camera-ready .venue-map-card__compass {
+    position: absolute;
+    z-index: 5;
+    left: 8%;
+    top: 9%;
+    width: 46px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(181,154,98,.38);
+    border-radius: 50%;
+    color: var(--gold-ink,#80683f);
+}
+.storybook.world-camera-ready .venue-map-card__compass::before,
+.storybook.world-camera-ready .venue-map-card__compass::after { content: ""; position: absolute; background: rgba(181,154,98,.32); }
+.storybook.world-camera-ready .venue-map-card__compass::before { width: 1px; height: 62px; }
+.storybook.world-camera-ready .venue-map-card__compass::after { width: 62px; height: 1px; }
+.storybook.world-camera-ready .venue-map-card__compass i { font: 600 .55rem/1 var(--font-body,"Poppins",sans-serif); transform: translateY(-12px); }
+
+.storybook.world-camera-ready .venue-map-card__monogram {
+    position: absolute;
+    z-index: 5;
+    left: 8%;
+    bottom: 9%;
+    color: rgba(18,53,47,.58);
+    transform: scale(.72);
+    transform-origin: left bottom;
+}
+
+.storybook.world-camera-ready .venue-visual__caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin: 16px 2px 0;
+    color: var(--gold-ink,#80683f);
+    font-family: var(--font-body,"Poppins",sans-serif);
+    font-size: .6rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.storybook.world-camera-ready .world-location.detail-reveal .venue-copy,
+.storybook.world-camera-ready .world-location.detail-reveal .venue-visual {
+    opacity: 0;
+    transform: translate3d(0,22px,0);
+    transition: opacity .85s ease,transform 1.05s cubic-bezier(.22,.61,.36,1);
+}
+.storybook.world-camera-ready .world-location.detail-visible .venue-copy,
+.storybook.world-camera-ready .world-location.detail-visible .venue-visual { opacity: 1; transform: none; }
+.storybook.world-camera-ready .world-location.detail-visible .venue-visual { transition-delay: .14s; }
+
+@media (max-width: 899px) {
+    .storybook.world-camera-ready .world-location {
+        grid-template-columns: minmax(0,1fr);
+        align-content: center;
+        gap: clamp(40px,8vw,64px);
+        min-height: 108svh;
+        padding: clamp(82px,10svh,108px) max(24px,var(--story-safe-right)) clamp(90px,11svh,116px) max(24px,var(--story-safe-left));
+        background:
+            radial-gradient(circle at 90% 12%,rgba(181,154,98,.11),transparent 24%),
+            linear-gradient(180deg,rgba(247,245,239,.995),rgba(241,238,229,.92));
+    }
+    .storybook.world-camera-ready .world-location::before { right: -22%; top: -3%; width: 250px; }
+    .storybook.world-camera-ready .world-location::after { left: 24px; bottom: 5%; }
+    .storybook.world-camera-ready .venue-copy { width: min(100%,620px); justify-self: center; }
+    .storybook.world-camera-ready .world-location .venue-copy h3 { font-size: clamp(2.7rem,8.4vw,3.8rem); }
+    .storybook.world-camera-ready .world-location .venue-copy h3 em { margin-left: .2em; }
+    .storybook.world-camera-ready .world-location .venue-address { max-width: 56ch; }
+    .storybook.world-camera-ready .venue-visual { width: min(100%,650px); justify-self: center; }
+    .storybook.world-camera-ready .venue-map-card { aspect-ratio: 1.34; }
+}
+
+@media (max-width: 599px) {
+    .storybook.world-camera-ready .world-location {
+        gap: 36px;
+        padding-inline: max(20px,var(--story-safe-left)) max(20px,var(--story-safe-right));
+    }
+    .storybook.world-camera-ready .venue-rule { margin: 15px 0 21px; }
+    .storybook.world-camera-ready .world-location .venue-copy h3 { font-size: clamp(2.45rem,11.5vw,3.15rem); line-height: .92; }
+    .storybook.world-camera-ready .world-location .venue-address { max-width: 100%; margin-top: 24px; font-size: .9rem; line-height: 1.68; }
+    .storybook.world-camera-ready .world-location .venue-region { margin-top: 14px; font-size: .59rem; letter-spacing: .13em; }
+    .storybook.world-camera-ready .world-location .venue-cta { width: min(100%,330px); min-width: 0; min-height: 52px; margin-top: 28px; }
+    .storybook.world-camera-ready .venue-visual__index { margin-bottom: 11px; text-align: left; }
+    .storybook.world-camera-ready .venue-map-card { min-height: 292px; aspect-ratio: auto; }
+    .storybook.world-camera-ready .venue-map-card::before { inset: 11px; }
+    .storybook.world-camera-ready .venue-map-card__pin { left: 61%; top: 28%; width: 48px; }
+    .storybook.world-camera-ready .venue-map-card__label { left: 69%; top: 42%; }
+    .storybook.world-camera-ready .venue-map-card__label strong { font-size: 1.45rem; }
+    .storybook.world-camera-ready .venue-map-card__compass { left: 8%; top: 10%; width: 38px; }
+    .storybook.world-camera-ready .venue-map-card__compass::before { height: 52px; }
+    .storybook.world-camera-ready .venue-map-card__compass::after { width: 52px; }
+    .storybook.world-camera-ready .venue-map-card__monogram { left: 7%; bottom: 7%; transform: scale(.6); }
+    .storybook.world-camera-ready .venue-visual__caption { font-size: .52rem; letter-spacing: .12em; }
+}
+
+@media (max-width: 380px) {
+    .storybook.world-camera-ready .world-location .venue-cta { padding-inline: 16px; font-size: .67rem; letter-spacing: .09em; }
+    .storybook.world-camera-ready .venue-map-card__label { left: 65%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .storybook.world-camera-ready .world-location,
+    .storybook.world-camera-ready .world-location .venue-copy,
+    .storybook.world-camera-ready .world-location .venue-visual,
+    .storybook.world-camera-ready .world-location .venue-cta {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}

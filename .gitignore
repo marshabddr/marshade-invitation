@@ -1,0 +1,16 @@
+backup/
+qa-previews/
+
+# Legacy / temporary
+undangan.html
+
+# OS/editor temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Local QA / temporary screenshots if they appear in the project root
+*qa*.png
+*qa*.jpg
+*qa*.webp

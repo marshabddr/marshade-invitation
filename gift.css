@@ -1,0 +1,644 @@
+/* Sealed Wedding Envelope — Puteri & Ilham */
+.storybook .gift-panel[hidden],
+.storybook .gift-address-details[hidden] {
+    display: none !important;
+}
+
+.storybook .world-shot--gift-configured {
+    color: var(--primary-ink);
+    background: transparent;
+    overflow: visible;
+}
+
+.storybook.world-camera-ready .world-shot--gift-configured {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.storybook .gift-inner {
+    width: min(100%, 820px);
+    max-width: none;
+    margin-inline: auto;
+    position: relative;
+    z-index: 12;
+}
+
+.storybook .gift-inner > .response-kicker {
+    color: var(--muted-gold);
+}
+
+.storybook .gift-inner > .response-intro {
+    max-width: 58ch;
+    margin-inline: auto;
+}
+
+.storybook .gift-composition {
+    position: relative;
+    width: min(100%, 760px);
+    min-height: 370px;
+    margin: 18px auto 0;
+    isolation: isolate;
+    overflow: visible;
+    box-sizing: border-box;
+    transition: min-height .45s ease, padding-bottom .45s ease;
+}
+
+.storybook .gift-composition.is-open {
+    min-height: 0;
+    padding-bottom: 220px;
+}
+
+.storybook .gift-letter {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 50%;
+    width: min(88%, 590px);
+    min-height: 520px;
+    padding: 34px clamp(20px, 5vw, 48px) 38px;
+    box-sizing: border-box;
+    color: var(--primary-ink);
+    border: 1px solid rgba(181, 154, 98, .42);
+    background:
+        linear-gradient(90deg, transparent 0 96%, rgba(181, 154, 98, .08) 96%),
+        #fbf8f0;
+    box-shadow: 0 24px 48px rgba(36, 51, 45, .13);
+    isolation: isolate;
+    overflow: visible;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 255px) scale(.94);
+    transition: transform .72s cubic-bezier(.22, .75, .24, 1), opacity .28s ease;
+}
+
+.storybook .gift-composition.is-open .gift-letter {
+    position: relative;
+    z-index: 8;
+    top: auto;
+    left: auto;
+    min-height: 0;
+    margin-inline: auto;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-12px) scale(1);
+    transition-delay: .12s;
+}
+
+.storybook .gift-letter::before,
+.storybook .gift-letter::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+.storybook .gift-letter::before {
+    z-index: 0;
+    inset: 10px;
+    border: 1px solid rgba(181, 154, 98, .18);
+}
+
+.storybook .gift-letter::after {
+    z-index: 0;
+    right: 14px;
+    top: 20px;
+    width: 72px;
+    height: 92px;
+    opacity: .22;
+    background:
+        radial-gradient(ellipse at 70% 18%, var(--muted-emerald) 0 8%, transparent 9%),
+        radial-gradient(ellipse at 48% 42%, var(--muted-emerald) 0 9%, transparent 10%),
+        radial-gradient(ellipse at 76% 66%, var(--muted-emerald) 0 8%, transparent 9%),
+        linear-gradient(72deg, transparent 47%, var(--muted-emerald) 48% 50%, transparent 51%);
+}
+
+.storybook .gift-letter__heading {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.storybook .gift-letter__heading p {
+    margin: 0;
+    color: var(--deep-emerald);
+    font: 500 clamp(1.2rem, 3vw, 1.65rem)/1.2 var(--font-display);
+}
+
+.storybook .gift-letter__thread {
+    width: clamp(34px, 8vw, 82px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--muted-gold));
+}
+
+.storybook .gift-letter__monogram {
+    width: 48px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    color: var(--paper-ivory);
+    border-radius: 50%;
+    background: var(--deep-emerald);
+    box-shadow: inset 0 0 0 3px rgba(181, 154, 98, .3);
+    font: 600 .73rem/1 var(--font-display);
+    letter-spacing: .06em;
+}
+
+.storybook .gift-choice-sheets {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.storybook .gift-choice {
+    min-height: 68px;
+    padding: 15px 16px;
+    border: 1px solid rgba(181, 154, 98, .42);
+    border-radius: 1px;
+    color: var(--deep-emerald);
+    background: #f5efe3;
+    box-shadow: 7px 8px 0 rgba(44, 81, 72, .08);
+    font: 600 var(--type-label)/1.45 var(--font-body);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform .28s ease, background-color .28s ease, box-shadow .28s ease;
+}
+
+.storybook .gift-choice:first-child {
+    transform: rotate(-1.3deg);
+}
+
+.storybook .gift-choice:last-child {
+    transform: rotate(1.3deg);
+}
+
+.storybook .gift-choice span {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--muted-gold);
+    font-size: .72em;
+}
+
+.storybook .gift-choice:hover,
+.storybook .gift-choice.is-selected {
+    color: var(--paper-ivory);
+    background: var(--muted-emerald);
+    box-shadow: 4px 5px 0 rgba(181, 154, 98, .26);
+    transform: translateY(-2px) rotate(0);
+}
+
+.storybook .gift-choice:focus-visible,
+.storybook .gift-open-button:focus-visible,
+.storybook .gift-action:focus-visible,
+.storybook .gift-address-toggle:focus-visible {
+    outline: 2px solid var(--deep-emerald);
+    outline-offset: 4px;
+}
+
+.storybook .gift-panel {
+    position: relative;
+    z-index: 4;
+    overflow: visible;
+    padding: 23px 12px 4px;
+    border-top: 1px solid rgba(181, 154, 98, .38);
+    animation: gift-detail-reveal .38s ease both;
+}
+
+.storybook .gift-panel__eyebrow {
+    margin: 0 0 10px;
+    color: var(--muted-gold);
+    font: 600 .75rem/1.4 var(--font-body);
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.storybook .gift-account-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    max-width: 520px;
+    margin: 4px auto 0;
+    padding: 8px 10px 15px;
+}
+
+.storybook .gift-account-sheet {
+    position: relative;
+    min-width: 0;
+    padding: 22px 18px 20px;
+    border: 1px solid rgba(181, 154, 98, .4);
+    background:
+        linear-gradient(160deg, transparent 72%, rgba(167, 176, 163, .13)),
+        #fbf8f0;
+    box-shadow: 9px 11px 18px rgba(36, 51, 45, .1);
+}
+
+.storybook .gift-account-sheet:first-child {
+    z-index: 2;
+    transform: translateX(8px) rotate(-1.4deg);
+}
+
+.storybook .gift-account-sheet:last-child {
+    z-index: 1;
+    transform: translate(-8px, 10px) rotate(1.4deg);
+}
+
+.storybook .gift-account-sheet::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    top: 51px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--muted-gold), transparent);
+}
+
+.storybook .gift-bank,
+.storybook .gift-account-holder,
+.storybook .gift-recipient-label,
+.storybook .gift-recipient,
+.storybook .gift-address-details address {
+    margin: 0;
+    color: var(--readable-secondary);
+    font: 400 var(--type-body)/1.7 var(--font-body);
+}
+
+.storybook .gift-bank,
+.storybook .gift-recipient {
+    color: var(--deep-emerald);
+    font-weight: 600;
+}
+
+.storybook .gift-bank {
+    padding-bottom: 12px;
+    font-size: .82rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.storybook .gift-recipient-label {
+    color: var(--muted-gold);
+    font-size: .76rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.storybook .gift-recipient {
+    margin-top: 4px;
+}
+
+.storybook .gift-account-number {
+    margin: 8px 0;
+    color: var(--deep-emerald);
+    font: 600 clamp(1.28rem, 4.4vw, 1.72rem)/1.35 var(--font-body);
+    letter-spacing: .07em;
+    overflow-wrap: anywhere;
+    white-space: nowrap;
+}
+
+.storybook .gift-account-sheet .gift-action {
+    width: 100%;
+    margin-top: 16px;
+    padding-inline: 12px;
+}
+
+.storybook .gift-address-details {
+    max-width: 46ch;
+    margin: 18px auto 0;
+}
+
+.storybook .gift-address-details address {
+    margin-top: 6px;
+    font-style: normal;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+.storybook .gift-action,
+.storybook .gift-address-toggle,
+.storybook .gift-open-button {
+    min-height: 46px;
+    padding: 11px 20px;
+    border: 1px solid var(--muted-gold);
+    border-radius: 999px;
+    font: 600 var(--type-label)/1.45 var(--font-body);
+    cursor: pointer;
+}
+
+.storybook .gift-action,
+.storybook .gift-address-toggle {
+    margin-top: 20px;
+    color: var(--deep-emerald);
+    background: rgba(181, 154, 98, .1);
+}
+
+.storybook .gift-envelope {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 0;
+    bottom: auto;
+    width: min(78%, 540px);
+    aspect-ratio: 1.62;
+    overflow: visible;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 22px 22px rgba(36, 51, 45, .16));
+    transition: transform .62s cubic-bezier(.22, .75, .24, 1), opacity .3s ease, width .45s ease;
+}
+
+.storybook .gift-envelope__lining,
+.storybook .gift-envelope__front,
+.storybook .gift-envelope__flap {
+    position: absolute;
+    inset: 0;
+}
+
+.storybook .gift-envelope__lining {
+    z-index: 1;
+    border: 1px solid rgba(181, 154, 98, .44);
+    background: #e9dece;
+}
+
+.storybook .gift-envelope__flap {
+    z-index: 5;
+    clip-path: polygon(0 0, 100% 0, 50% 72%);
+    background: linear-gradient(150deg, #f5eee3, #e7dac8);
+    transform-origin: 50% 0;
+    transform: rotateX(0deg);
+    backface-visibility: visible;
+    transition: transform .62s cubic-bezier(.22, .75, .24, 1), opacity .3s ease, z-index 0s linear .28s;
+}
+
+.storybook .gift-envelope__front {
+    z-index: 4;
+    border: 1px solid rgba(181, 154, 98, .42);
+    background:
+        linear-gradient(32deg, #ede2d2 0 49.5%, transparent 50%),
+        linear-gradient(-32deg, #f3eadc 0 49.5%, transparent 50%);
+    clip-path: polygon(0 0, 50% 54%, 100% 0, 100% 100%, 0 100%);
+}
+
+.storybook .gift-envelope__thread {
+    position: absolute;
+    z-index: 6;
+    left: 8%;
+    right: 8%;
+    top: 59%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--muted-gold) 20% 80%, transparent);
+    transition: opacity .24s ease;
+}
+
+.storybook .gift-envelope__seal {
+    position: absolute;
+    z-index: 7;
+    left: 50%;
+    top: 58%;
+    width: 64px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    color: var(--paper-ivory);
+    border-radius: 50%;
+    background: var(--deep-emerald);
+    box-shadow: inset 0 0 0 4px rgba(181, 154, 98, .28), 0 8px 16px rgba(36, 51, 45, .18);
+    font: 600 .83rem/1 var(--font-display);
+    letter-spacing: .05em;
+    transform: translate(-50%, -50%);
+    transition: opacity .2s ease, transform .32s ease;
+}
+
+.storybook .gift-composition.is-open .gift-envelope__flap {
+    z-index: 0;
+    opacity: .68;
+    transform: translateY(-22px) rotateX(180deg) scaleY(.92);
+}
+
+.storybook .gift-composition.is-open .gift-envelope {
+    z-index: 1;
+    top: auto;
+    bottom: 40px;
+    width: min(92%, 620px);
+    opacity: .96;
+    transform: translateX(-50%) scale(.96);
+}
+
+.storybook .gift-composition.is-open .gift-envelope__thread {
+    opacity: .28;
+}
+
+.storybook .gift-composition.is-open .gift-envelope__seal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.72);
+}
+
+.storybook .gift-open-button {
+    position: relative;
+    z-index: 14;
+    min-width: 150px;
+    margin-top: -6px;
+    color: var(--paper-ivory);
+    background: var(--deep-emerald);
+    box-shadow: 0 12px 24px rgba(36, 51, 45, .14);
+    transition: margin-top .35s ease, background-color .25s ease;
+}
+
+.storybook .gift-composition.is-open + .gift-open-button {
+    margin-top: -28px;
+}
+
+.storybook .gift-open-button:hover {
+    background: var(--muted-emerald);
+}
+
+.storybook .gift-feedback {
+    position: relative;
+    z-index: 15;
+    min-height: 1.7em;
+    margin: 14px 0 0;
+    color: var(--deep-emerald);
+    font: 500 var(--type-label)/1.7 var(--font-body);
+}
+
+/* The master-world envelope echoes the interaction without changing camera data. */
+.storybook.world-camera-ready .world-envelope-letter {
+    position: absolute;
+    z-index: 0;
+    left: 12%;
+    right: 12%;
+    top: 18px;
+    height: 116px;
+    display: grid;
+    place-items: start center;
+    padding-top: 22px;
+    box-sizing: border-box;
+    color: var(--muted-gold);
+    border: 1px solid rgba(181, 154, 98, .35);
+    background: #fbf8f0;
+    font: 600 .48rem/1 var(--font-body);
+    letter-spacing: .18em;
+    transform: translateY(72px);
+    transition: transform .68s cubic-bezier(.22, .75, .24, 1);
+}
+
+.storybook.world-camera-ready .world-object--gift,
+.storybook.world-camera-ready .world-object--gift .world-envelope-flap,
+.storybook.world-camera-ready .world-object--gift .world-envelope-seal {
+    transition: transform .62s cubic-bezier(.22, .75, .24, 1), opacity .24s ease;
+}
+
+.storybook.world-camera-ready.gift-envelope-open .world-object--gift {
+    overflow: visible;
+}
+
+.storybook.world-camera-ready.gift-envelope-open .world-object--gift .world-envelope-letter {
+    transform: translateY(-52px);
+}
+
+.storybook.world-camera-ready.gift-envelope-open .world-object--gift .world-envelope-flap {
+    transform: translateX(-50%) translateY(-25px) rotate(225deg);
+}
+
+.storybook.world-camera-ready.gift-envelope-open .world-object--gift .world-envelope-seal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.7);
+}
+
+@keyframes gift-detail-reveal {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 900px) {
+    .storybook.world-camera-ready .world-shot--gift-configured {
+        min-height: 142svh;
+        padding: 105px var(--story-safe-right) 120px var(--story-safe-left);
+    }
+
+    .storybook .gift-choice--transfer {
+        transform: rotate(-2deg) translateY(5px);
+    }
+
+    .storybook .gift-choice--shipping {
+        transform: rotate(2deg) translateY(5px);
+    }
+}
+
+@media (max-width: 899px) {
+    .storybook.world-camera-ready .world-shot--gift-configured,
+    .storybook .world-shot--gift-configured {
+        min-height: 146svh;
+        padding: 88px max(18px, env(safe-area-inset-right)) 100px max(18px, env(safe-area-inset-left));
+    }
+
+    .storybook .gift-composition {
+        min-height: clamp(240px, 50vw, 330px);
+        margin-top: 14px;
+    }
+
+    .storybook .gift-composition.is-open {
+        min-height: 0;
+        padding-bottom: 220px;
+    }
+
+    .storybook .gift-letter {
+        top: 8px;
+        width: min(94%, 520px);
+        min-height: 650px;
+        padding: 28px 18px 34px;
+        transform: translate(-50%, 285px) scale(.94);
+    }
+
+    .storybook .gift-composition.is-open .gift-letter {
+        transform: translateY(-8px) scale(1);
+    }
+
+    .storybook .gift-choice-sheets {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .storybook .gift-choice,
+    .storybook .gift-choice:first-child,
+    .storybook .gift-choice:last-child {
+        min-height: 58px;
+        transform: none;
+    }
+
+    .storybook .gift-account-list {
+        grid-template-columns: 1fr;
+        width: min(100%, 360px);
+        padding-inline: 4px;
+    }
+
+    .storybook .gift-account-sheet:first-child {
+        transform: rotate(-.6deg);
+    }
+
+    .storybook .gift-account-sheet:last-child {
+        transform: translateY(-5px) rotate(.6deg);
+    }
+
+    .storybook .gift-envelope {
+        width: min(96%, 480px);
+    }
+
+    .storybook .gift-composition.is-open .gift-envelope {
+        bottom: 32px;
+        width: min(100%, 560px);
+        transform: translateX(-50%) scale(.94);
+    }
+
+    .storybook .gift-open-button {
+        margin-top: -2px;
+    }
+
+    .storybook .gift-composition.is-open + .gift-open-button {
+        margin-top: -22px;
+    }
+}
+
+@media (max-width: 430px) {
+    .storybook .gift-letter__heading {
+        gap: 9px;
+    }
+
+    .storybook .gift-letter__thread {
+        width: 24px;
+    }
+
+    .storybook .gift-letter__heading p {
+        font-size: 1.12rem;
+    }
+
+    .storybook .gift-letter__monogram {
+        width: 44px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .storybook .gift-letter,
+    .storybook .gift-composition,
+    .storybook .gift-envelope,
+    .storybook .gift-envelope__flap,
+    .storybook .gift-envelope__thread,
+    .storybook .gift-envelope__seal,
+    .storybook.world-camera-ready .world-envelope-letter,
+    .storybook.world-camera-ready .world-object--gift,
+    .storybook.world-camera-ready .world-object--gift .world-envelope-flap,
+    .storybook.world-camera-ready .world-object--gift .world-envelope-seal,
+    .storybook .gift-choice,
+    .storybook .gift-open-button,
+    .storybook .gift-panel {
+        animation: none;
+        transition: none;
+    }
+}

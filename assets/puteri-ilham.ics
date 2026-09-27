@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Puteri Ilham//Wedding Invitation//ID
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:puteri-ilham-20261205@wedding.local
+DTSTAMP:20260905T000000Z
+DTSTART:20261205T020000Z
+SUMMARY:Pernikahan Puteri & Ilham
+DESCRIPTION:Akad nikah pukul 09.00 WIB. Resepsi pukul 11.00 WIB.
+LOCATION:Jl. Raya Wado - Sumedang Warungketan\, Jatimekar\,
+  Kec. Situraja\, Kab. Sumedang (Samping Alfamart Warung ketan)
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,561 @@
+/* Puteri & Ilham — reference-inspired monogram and couple wordmarks. */
+
+.brand-symbols {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.storybook .brand-monogram {
+    --brand-emblem-size: 5rem;
+    --brand-emblem-ink: currentColor;
+    --brand-emblem-accent: var(--gold-ink, #80683f);
+    display: inline-grid;
+    place-items: center;
+    width: var(--brand-emblem-size);
+    aspect-ratio: 1;
+    flex: 0 0 auto;
+    color: var(--brand-emblem-ink);
+    line-height: 1;
+}
+
+.storybook .brand-monogram__art {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    color: var(--brand-emblem-ink);
+    shape-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
+}
+
+.storybook .brand-monogram__orbit,
+.storybook .brand-monogram__foliage,
+.storybook .brand-monogram__ampersand-spine,
+.storybook .brand-monogram__ampersand-curve,
+.storybook .brand-monogram__ampersand-swash {
+    fill: none;
+    stroke: var(--brand-emblem-accent);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.storybook .brand-monogram__orbit { stroke-width: .56; }
+.storybook .brand-monogram__orbit--lower { stroke-width: .52; }
+.storybook .brand-monogram__foliage { stroke-width: .52; }
+
+.storybook .brand-monogram__letter {
+    fill: currentColor;
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: 88px;
+    font-weight: 400;
+    letter-spacing: -.06em;
+}
+
+.storybook .brand-monogram__letter--i { font-size: 94px; }
+.storybook .brand-monogram__ampersand { color: var(--brand-emblem-accent); }
+.storybook .brand-monogram__ampersand-spine { stroke-width: 3.6; }
+.storybook .brand-monogram__ampersand-curve { stroke-width: 1.22; }
+.storybook .brand-monogram__ampersand-swash { stroke-width: .78; }
+
+.storybook .brand-monogram__art use {
+    pointer-events: none;
+}
+
+.storybook .brand-couple-name {
+    font-family: "Bodoni Moda", "Times New Roman", serif;
+    font-weight: 500;
+    letter-spacing: .115em;
+    text-transform: uppercase;
+    text-wrap: balance;
+}
+
+.storybook .story-opening .cover-names.brand-couple-name,
+.storybook .world-shot--establish .establishing-names.brand-couple-name,
+.storybook .world-shot--date .hero-names.brand-couple-name,
+.storybook .closing #closingNames.brand-couple-name {
+    font-family: "Bodoni Moda", "Times New Roman", serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.storybook .brand-couple-name .cover-ampersand,
+.storybook .brand-couple-name > i,
+.storybook .hero-names.brand-couple-name > span,
+.storybook .closing .brand-couple-name > span {
+    color: inherit;
+    font-family: "Bodoni Moda", "Times New Roman", serif;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.storybook .story-opening .cover-names.brand-couple-name > .brand-ampersand,
+.storybook .world-shot--establish .establishing-names.brand-couple-name > .brand-ampersand,
+.storybook .world-shot--date .hero-names.brand-couple-name > .brand-ampersand,
+.storybook .closing #closingNames.brand-couple-name > .brand-ampersand {
+    color: inherit;
+    width: .82em;
+    height: .88em;
+    flex: none;
+    overflow: visible;
+    line-height: 1;
+    letter-spacing: 0;
+    display: inline-block;
+    margin-inline: .17em;
+    vertical-align: -.075em;
+    transform: none;
+}
+
+.storybook .brand-ampersand > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    color: inherit;
+}
+
+.storybook .brand-ampersand__use {
+    fill: none;
+    stroke: currentColor;
+}
+
+.storybook .brand-ampersand__spine,
+.storybook .brand-ampersand__curve,
+.storybook .brand-ampersand__swash {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.storybook .brand-ampersand__spine {
+    stroke-width: 13;
+}
+
+.storybook .brand-ampersand__curve {
+    stroke-width: 4.5;
+}
+
+.storybook .brand-ampersand__swash {
+    stroke-width: 2.8;
+}
+
+.storybook .world-shot--establish .establishing-names.brand-couple-name {
+    font-size: clamp(2.95rem, 4.4vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: .09em;
+}
+
+.storybook .world-shot--date .hero-names.brand-couple-name {
+    font-size: clamp(3.25rem, 6vw, 5.4rem);
+    line-height: 1;
+    letter-spacing: .09em;
+}
+
+.storybook .closing #closingNames.brand-couple-name {
+    font-size: clamp(3rem, 5.4vw, 5.1rem);
+    line-height: 1;
+    letter-spacing: .09em;
+}
+
+.storybook .brand-mini-wordmark,
+.storybook .brand-couple-inline {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    letter-spacing: .11em;
+}
+
+.storybook .story-opening .cover-eyebrow,
+.storybook .world-shot--establish .establishing-eyebrow,
+.storybook .world-shot--date .hero-kicker {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    letter-spacing: .22em;
+}
+
+/* Large, airy mark on the cinematic cover. */
+.storybook .story-opening .story-monogram {
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.storybook .brand-monogram--hero {
+    --brand-emblem-size: clamp(7.4rem, 11vw, 10rem);
+    --brand-emblem-ink: var(--paper-ivory, #f7f5ef);
+    --brand-emblem-accent: #d8bb78;
+    filter: drop-shadow(0 8px 22px rgba(5, 28, 24, .22));
+}
+
+/* Cover: centered, reference-led hierarchy without affecting later scenes. */
+.storybook .story-opening .overlay {
+    width: min(calc(100% - 44px), 760px);
+    min-height: calc(100svh - max(42px, env(safe-area-inset-top) + env(safe-area-inset-bottom)));
+    padding: clamp(40px, 6vh, 68px) 0 clamp(34px, 5vh, 56px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(28px, 4.5vh, 42px);
+    text-align: center;
+}
+
+.storybook .story-opening .cover-heading {
+    width: 100%;
+    align-items: center;
+}
+
+.storybook .story-opening .cover-eyebrow {
+    order: 1;
+    margin: 0;
+    color: rgba(247, 245, 239, .76);
+    font-size: clamp(.67rem, 1.2vw, .78rem);
+    line-height: 1.4;
+    letter-spacing: .3em;
+}
+
+.storybook .story-opening .cover-eyebrow__text {
+    display: inline-block;
+    transform: translateY(-18px);
+}
+
+.storybook .story-opening .story-monogram {
+    order: 2;
+    min-width: 0;
+    min-height: 0;
+    margin-top: clamp(.75rem, 2vh, 1.2rem);
+}
+
+.storybook .story-opening .cover-names.brand-couple-name {
+    order: 3;
+    width: auto;
+    max-width: 100%;
+    margin: clamp(1rem, 2.4vh, 1.45rem) 0 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0;
+    font-size: clamp(2.35rem, 3.6vw, 3.4rem);
+    line-height: 1;
+    letter-spacing: .115em;
+    white-space: nowrap;
+}
+
+.storybook .story-opening .cover-ampersand {
+    margin: 0 .28em;
+    font-size: 1em;
+    line-height: 1;
+}
+
+.storybook .story-opening .cover-names .brand-name-ilham {
+    margin-inline-start: .14em;
+    margin-inline-end: -.14em;
+}
+
+.storybook .story-opening .cover-date {
+    order: 4;
+    margin-top: clamp(1rem, 2.5vh, 1.45rem);
+    font-size: clamp(.65rem, 1vw, .75rem);
+    line-height: 1.5;
+    letter-spacing: .24em;
+}
+
+.storybook .story-opening .cover-invitation {
+    width: 390px;
+    max-width: 100%;
+    flex: none;
+    align-self: center;
+    margin: 0;
+    padding: clamp(1.15rem, 2.5vh, 1.45rem) 0 0;
+    border-top: 1px solid rgba(181, 154, 98, .34);
+    border-left: 0;
+    text-align: center;
+}
+
+.storybook .story-opening .cover-recipient-label {
+    font-size: clamp(.65rem, 1vw, .72rem);
+    font-weight: 400;
+    line-height: 1.65;
+    text-shadow: 0 0 12px rgba(18, 53, 47, .96);
+}
+
+.storybook .story-opening .guest-name {
+    margin-top: .35rem;
+    font-size: clamp(1.85rem, 3.2vw, 2.35rem);
+    line-height: 1.15;
+    text-shadow: 0 0 18px rgba(18, 53, 47, .96);
+}
+
+.storybook .story-opening .open-button {
+    min-width: 13.25rem;
+    min-height: 3rem;
+    margin-top: 1.05rem;
+    white-space: nowrap;
+}
+
+.storybook .story-opening .open-button > span {
+    flex: none;
+    white-space: nowrap;
+}
+
+.storybook.invitation-enhanced .story-opening.is-ready .cover-eyebrow { animation-delay: .08s; }
+.storybook.invitation-enhanced .story-opening.is-ready .story-monogram { animation-delay: .14s; }
+.storybook.invitation-enhanced .story-opening.is-ready .cover-names { animation-delay: .22s; }
+.storybook.invitation-enhanced .story-opening.is-ready .cover-date { animation-delay: .30s; }
+.storybook.invitation-enhanced .story-opening.is-ready .cover-recipient-label { animation-delay: .39s; }
+.storybook.invitation-enhanced .story-opening.is-ready .guest-name { animation-delay: .46s; }
+.storybook.invitation-enhanced .story-opening.is-ready .open-button { animation-delay: .53s; }
+
+/* Paper and story-world applications stay quieter than the cover. */
+.storybook .brand-monogram--paper {
+    --brand-emblem-size: 5.4rem;
+    --brand-emblem-ink: var(--deep-emerald, #12352f);
+    --brand-emblem-accent: var(--gold-ink, #80683f);
+}
+
+.storybook.world-camera-ready .world-monogram.brand-monogram {
+    --brand-emblem-size: clamp(7.25rem, 10vw, 10rem);
+    --brand-emblem-ink: var(--deep-emerald, #12352f);
+    --brand-emblem-accent: var(--gold-ink, #80683f);
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.storybook .brand-monogram--handoff {
+    --brand-emblem-size: 5.1rem;
+    --brand-emblem-ink: var(--deep-emerald, #12352f);
+    --brand-emblem-accent: var(--gold-ink, #80683f);
+}
+
+.storybook .brand-monogram--closing-object {
+    --brand-emblem-size: 4.8rem;
+    --brand-emblem-ink: var(--deep-emerald, #12352f);
+    --brand-emblem-accent: var(--gold-ink, #80683f);
+}
+
+/* Compact applications retain the same complete emblem rather than a separate shorthand. */
+.storybook .brand-monogram--seal {
+    --brand-emblem-size: 2.35rem;
+    --brand-emblem-ink: currentColor;
+    --brand-emblem-accent: #d9c184;
+}
+
+.storybook.world-camera-ready .world-invitation i.brand-monogram,
+.storybook .story-quran__handoff i.brand-monogram {
+    --brand-emblem-size: 2.65rem;
+    --brand-emblem-ink: var(--deep-emerald, #12352f);
+    --brand-emblem-accent: var(--gold-ink, #80683f);
+    font-style: normal;
+}
+
+.storybook .story-quran__handoff i.brand-monogram {
+    --brand-emblem-size: 2.15rem;
+}
+
+.storybook .brand-monogram--gift {
+    --brand-emblem-size: 3rem;
+    --brand-emblem-ink: var(--paper-ivory, #f7f5ef);
+    --brand-emblem-accent: #d9c184;
+}
+
+.storybook .world-wax-seal .brand-monogram,
+.storybook .world-envelope-seal .brand-monogram,
+.storybook .gift-envelope__seal .brand-monogram {
+    --brand-emblem-ink: var(--paper-ivory, #f7f5ef);
+    --brand-emblem-accent: #d9c184;
+}
+
+.storybook .venue-map-card__monogram.brand-monogram {
+    --brand-emblem-size: 3.5rem;
+    --brand-emblem-ink: var(--deep-emerald, #12352f);
+    --brand-emblem-accent: var(--gold-ink, #80683f);
+}
+
+.storybook .world-wax-seal,
+.storybook .world-envelope-seal,
+.storybook .gift-envelope__seal {
+    display: grid;
+    place-items: center;
+}
+
+/* Parent information: shared ampersand language and a calmer editorial rhythm. */
+.storybook .story-couple .parent {
+    width: min(100%, 34rem);
+    margin-top: clamp(22px, 2.4vw, 28px);
+    display: grid;
+    gap: 10px;
+}
+
+.storybook .story-couple .parent-label {
+    margin: 0;
+    color: var(--gold-ink, #80683f);
+    font-family: var(--font-body, "Poppins", sans-serif);
+    font-size: clamp(.64rem, .8vw, .72rem);
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.storybook .story-couple .parent-names {
+    width: min(100%, 32ch);
+    display: grid;
+    justify-items: start;
+    gap: 7px;
+    color: var(--deep-emerald, #12352f);
+    font-family: var(--font-display, "Cormorant Garamond", serif);
+    font-size: clamp(1.08rem, 1.55vw, 1.28rem);
+    font-weight: 500;
+    line-height: 1.34;
+    letter-spacing: .005em;
+    text-wrap: pretty;
+}
+
+.storybook .story-couple .parent-name {
+    display: block;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.storybook .story-couple .parent-ampersand.brand-ampersand {
+    width: min(100%, 8.6rem);
+    height: 1.2rem;
+    display: grid;
+    grid-template-columns: minmax(20px, 1fr) 1.2rem minmax(20px, 1fr);
+    align-items: center;
+    gap: 9px;
+    margin: 1px 0 2px;
+    color: var(--gold-ink, #80683f);
+    line-height: 1;
+}
+
+.storybook .story-couple .parent-ampersand.brand-ampersand::before,
+.storybook .story-couple .parent-ampersand.brand-ampersand::after {
+    content: "";
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(128, 104, 63, .54));
+}
+
+.storybook .story-couple .parent-ampersand.brand-ampersand::after {
+    background: linear-gradient(90deg, rgba(128, 104, 63, .54), transparent);
+}
+
+.storybook .story-couple .parent-ampersand.brand-ampersand > svg {
+    grid-column: 2;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.storybook .story-couple .story-person--ilham .parent,
+.storybook .story-couple .story-person--ilham .parent-names {
+    margin-left: auto;
+}
+
+.storybook .story-couple .story-person--ilham .parent-names {
+    justify-items: end;
+}
+
+.storybook .story-couple .story-person--ilham .parent-ampersand.brand-ampersand {
+    margin-left: auto;
+}
+
+.storybook.world-camera-ready .story-couple .story-person--ilham .parent,
+.storybook.world-camera-ready .story-couple .story-person--ilham .parent-names {
+    margin-left: 0;
+}
+
+.storybook.world-camera-ready .story-couple .story-person--ilham .parent-names {
+    justify-items: start;
+}
+
+.storybook.world-camera-ready .story-couple .story-person--ilham .parent-ampersand.brand-ampersand {
+    margin-left: 0;
+}
+
+@media (max-width: 520px) {
+    .storybook .story-couple .parent {
+        gap: 9px;
+    }
+
+    .storybook .story-couple .parent-names {
+        width: min(100%, 30ch);
+        font-size: clamp(1.04rem, 4.7vw, 1.16rem);
+    }
+}
+
+@media (max-width: 520px) {
+    .storybook .brand-monogram--hero {
+        --brand-emblem-size: clamp(6.5rem, 30vw, 7.8rem);
+    }
+
+    .storybook .story-opening .cover-names.brand-couple-name {
+        width: 100%;
+        font-size: clamp(1.35rem, 5.7vw, 1.55rem);
+        letter-spacing: .09em;
+    }
+
+    .storybook .story-opening .cover-ampersand {
+        margin-inline: .22em;
+        font-size: 1em;
+    }
+
+    .storybook .story-opening .overlay {
+        width: min(calc(100% - 38px), 410px);
+        padding-block: clamp(34px, 5.5vh, 52px) clamp(28px, 4.5vh, 42px);
+        gap: clamp(24px, 4vh, 34px);
+    }
+
+    .storybook .story-opening .cover-invitation {
+        width: 330px;
+        max-width: 100%;
+    }
+
+    .storybook .world-shot--establish .establishing-names.brand-couple-name {
+        font-size: clamp(1.75rem, 7.6vw, 2.05rem);
+        letter-spacing: .075em;
+    }
+
+    .storybook .world-shot--date .hero-names.brand-couple-name,
+    .storybook .closing #closingNames.brand-couple-name {
+        font-size: clamp(2.15rem, 9.5vw, 2.6rem);
+        letter-spacing: .075em;
+    }
+
+    .storybook .brand-monogram--paper,
+    .storybook .brand-monogram--handoff {
+        --brand-emblem-size: 4.45rem;
+    }
+
+    .storybook.world-camera-ready .world-monogram.brand-monogram {
+        --brand-emblem-size: 7rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .storybook .story-opening .cover-names.brand-couple-name {
+        letter-spacing: .13em;
+    }
+
+    .storybook .world-shot--establish .establishing-names.brand-couple-name {
+        letter-spacing: .105em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .storybook .brand-monogram,
+    .storybook .brand-monogram__art {
+        animation: none !important;
+    }
+}
