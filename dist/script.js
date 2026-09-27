@@ -188,10 +188,23 @@ function initWorldCamera() {
     };
 
     if ("IntersectionObserver" in window) {
+        const revealShot = function (element) {
+            element.classList.add("world-shot-visible");
+        };
+        const revealInitiallyIntersectingShots = function () {
+            const revealMargin = window.innerHeight * 0.35;
+
+            shotElements.forEach(function (element) {
+                const rect = element.getBoundingClientRect();
+                if (rect.bottom >= -revealMargin && rect.top <= window.innerHeight + revealMargin) {
+                    revealShot(element);
+                }
+            });
+        };
         const shotObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add("world-shot-visible");
+                    revealShot(entry.target);
                 }
             });
         }, { rootMargin: "35% 0px 35% 0px", threshold: 0.01 });
@@ -199,6 +212,7 @@ function initWorldCamera() {
         shotElements.forEach(function (element) {
             shotObserver.observe(element);
         });
+        window.requestAnimationFrame(revealInitiallyIntersectingShots);
     } else {
         shotElements.forEach(function (element) {
             element.classList.add("world-shot-visible");

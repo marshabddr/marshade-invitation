@@ -28,6 +28,13 @@
     box-shadow: 0 24px 70px rgba(36, 51, 45, .1);
 }
 
+/* Reveal is persistent after the first intersection and is intentionally
+   independent from the camera's midpoint-based active-shot handoff. */
+.storybook.world-camera-ready .world-shot--date.world-shot-visible > .hero-content {
+    opacity: 1;
+    transform: none;
+}
+
 .storybook.world-camera-ready .world-shot--date .hero-content::before,
 .storybook.world-camera-ready .world-shot--date .hero-content::after {
     content: "";
