@@ -184,6 +184,10 @@
         margin-inline: .1em;
     }
 
+    .storybook.world-camera-ready .world-shot--date .hero-message {
+        word-spacing: .045em;
+    }
+
     .storybook.world-camera-ready .world-shot--date .hero-message br {
         display: none;
     }
