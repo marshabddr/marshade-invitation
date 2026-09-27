@@ -57,9 +57,9 @@
 
 .storybook .brand-monogram__letter--i { font-size: 94px; }
 .storybook .brand-monogram__ampersand { color: var(--brand-emblem-accent); }
-.storybook .brand-monogram__ampersand-spine { stroke-width: 3.6; }
-.storybook .brand-monogram__ampersand-curve { stroke-width: 1.22; }
-.storybook .brand-monogram__ampersand-swash { stroke-width: .78; }
+.storybook .brand-monogram__ampersand-spine { stroke-width: 3.68; }
+.storybook .brand-monogram__ampersand-curve { stroke-width: 1.34; }
+.storybook .brand-monogram__ampersand-swash { stroke-width: .88; }
 
 .storybook .brand-monogram__art use {
     pointer-events: none;
@@ -133,15 +133,15 @@
 }
 
 .storybook .brand-ampersand__spine {
-    stroke-width: 13;
+    stroke-width: 13.4;
 }
 
 .storybook .brand-ampersand__curve {
-    stroke-width: 4.5;
+    stroke-width: 5;
 }
 
 .storybook .brand-ampersand__swash {
-    stroke-width: 2.8;
+    stroke-width: 3.2;
 }
 
 .storybook .world-shot--establish .establishing-names.brand-couple-name {
