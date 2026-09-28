@@ -2380,3 +2380,32 @@
         max-width: 25ch;
     }
 }
+
+/* Editorial paragraph flow: narrative copy only; labels and metadata stay aligned as designed. */
+.storybook .story-welcome__message,
+.storybook .story-couple .couple-text,
+.storybook .islamic-opening .islamic-message,
+.storybook.world-camera-ready .world-cluster--story .story-chapter__copy p:not(.story-chapter__signature),
+.storybook.world-camera-ready .world-shot--gift-configured .response-intro,
+.storybook .wish-list p,
+.storybook .closing-message {
+    text-align: justify;
+    text-justify: inter-word;
+    text-wrap: wrap;
+}
+
+@media (max-width: 599px) {
+    .storybook .story-welcome__message,
+    .storybook .story-couple .couple-text,
+    .storybook .islamic-opening .islamic-message,
+    .storybook.world-camera-ready .world-cluster--story .story-chapter__copy p:not(.story-chapter__signature),
+    .storybook.world-camera-ready .world-shot--gift-configured .response-intro,
+    .storybook .wish-list p,
+    .storybook .closing-message {
+        text-align: justify;
+        text-align-last: auto;
+        text-justify: inter-word;
+        text-wrap: wrap;
+        word-spacing: normal;
+    }
+}

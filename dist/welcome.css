@@ -133,7 +133,8 @@
 }
 
 .storybook .story-welcome__message {
-    max-width: 43ch;
+    width: 100%;
+    max-width: 52ch;
     margin: clamp(16px, 3.5vw, 21px) auto 0;
     color: var(--readable-secondary, var(--secondary-ink));
     font-family: "Poppins", sans-serif;
@@ -202,7 +203,7 @@
     }
 
     .storybook .story-welcome__message {
-        max-width: 45ch;
+        max-width: 52ch;
     }
 }
 

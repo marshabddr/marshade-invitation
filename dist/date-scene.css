@@ -99,13 +99,17 @@
 }
 
 .storybook.world-camera-ready .world-shot--date .hero-message {
-    max-width: 40ch;
+    width: 100%;
+    max-width: 48ch;
     margin: 0 auto;
     color: var(--readable-secondary);
     font-size: clamp(.83rem, 1.25vw, .96rem);
     line-height: 1.8;
-    text-align: center;
-    text-wrap: pretty;
+    text-align: justify;
+    text-align-last: center;
+    text-justify: inter-word;
+    text-wrap: wrap;
+    word-spacing: normal;
 }
 
 .storybook.world-camera-ready .world-shot--date .hero-countdown {
@@ -185,7 +189,12 @@
     }
 
     .storybook.world-camera-ready .world-shot--date .hero-message {
-        word-spacing: .07em;
+        max-width: none;
+        text-align: justify;
+        text-align-last: auto;
+        text-justify: inter-word;
+        text-wrap: wrap;
+        word-spacing: normal;
     }
 
     .storybook.world-camera-ready .world-shot--date .hero-countdown {
